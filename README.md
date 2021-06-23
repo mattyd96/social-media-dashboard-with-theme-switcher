@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/sass-and-flexbox-with-a-tiny-bit-of-js--7FSKRYaH](https://www.frontendmentor.io/solutions/sass-and-flexbox-with-a-tiny-bit-of-js--7FSKRYaH)
+- Live Site URL: [https://sharp-tereshkova-f87839.netlify.app/](https://sharp-tereshkova-f87839.netlify.app/)
 
 ## My process
 
