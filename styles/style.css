@@ -99,6 +99,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
+  padding-top: 1.5rem;
   font-weight: 700;
   color: var(--second-text-color);
 }
@@ -137,6 +138,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 700;
+  padding-bottom: .8rem;
 }
 
 .big-cards .big-card .count-change i {
