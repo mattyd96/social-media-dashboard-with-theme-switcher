@@ -6,82 +6,229 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <title>Frontend Mentor | Social media dashboard with theme switcher</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    
   </style>
+
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+  <!-- empty div for header background -->
+  <div class="header-bg"></div>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+  <div class="container">
+    <!-- Heading Section -->
+    <header>
+      <div class="heading-section">
+        <div class="heading-text">
+          <h1>Social Media Dashboard</h1>
+          <p>Total Followers: 23,004</p>
+        </div>
+        <div class="dark-light-switch">
+          <p>Dark Mode</p>
+          <!-- Dark/light mode slider goes in here -->
+          <label class="switch">
+            <input type="checkbox" onclick="swapColors()">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div> 
+    </header>
 
-  Dark Mode
+    <!-- Big Cards -->
+    <div class="big-cards">
+      <article class="big-card card facebook">
+        <div class="name-and-network">
+          <i><img src="images/icon-facebook.svg" alt=""></i>
+          <p>@nathanf</p>
+        </div>
+        <div class="follower-count">
+          <p class="big-number">1987</p>
+          <p class="followers-subscribers">FOLLOWERS</p>
+        </div>
+        <div class="count-change up">
+          <i><img src="images/icon-up.svg" alt=""></i>
+          <p>12 Today</p>
+        </div>
+      </article>
+      <article class="big-card card twitter">
+        <div class="name-and-network">
+          <i><img src="images/icon-twitter.svg" alt=""></i>
+          <p>@nathanf</p>
+        </div>
+        <div class="follower-count">
+          <p class="big-number">1044</p>
+          <p class="followers-subscribers">FOLLOWERS</p>
+        </div>
+        <div class="count-change up">
+          <i><img src="images/icon-up.svg" alt=""></i>
+          <p>99 Today</p>
+        </div>
+      </article>
+      <article class="big-card card instagram">
+        <div class="name-and-network">
+          <i><img src="images/icon-instagram.svg" alt=""></i>
+          <p>@realnathanf</p>
+        </div>
+        <div class="follower-count">
+          <p class="big-number">11K</p>
+          <p class="followers-subscribers">FOLLOWERS</p>
+        </div>
+        <div class="count-change up">
+          <i><img src="images/icon-up.svg" alt=""></i>
+          <p>1099 Today</p>
+        </div>
+      </article>
+      <article class="big-card card youtube">
+        <div class="name-and-network">
+          <i><img src="images/icon-facebook.svg" alt=""></i>
+          <p>@nathanf</p>
+        </div>
+        <div class="follower-count">
+          <p class="big-number">8239</p>
+          <p class="followers-subscribers">SUBSCRIBERS</p>
+        </div>
+        <div class="count-change down">
+          <i><img src="images/icon-down.svg" alt=""></i>
+          <p>144 Today</p>
+        </div>
+      </article>
+    </div>
 
-  
+    <!-- Overview Section -->
+    <h2 class="overview">Overview - Today</h2>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+    <!-- Small Cards -->
+    <div class="small-cards">
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+      <!-- FACEBOOK -->
+      <article class="small-card card">
+        <div class="views-and-likes">
+          <p class="like-view-text">Page Views</p>
+          <i><img src="images/icon-facebook.svg" alt=""></i>
+        </div>
+        <div class="number-and-percent">
+          <p class="small-number">87</p>
+          <div class="percentage">
+            <i><img src="images/icon-up.svg" alt=""></i>
+            <p class="percentage-number up">3%</p>
+          </div>
+        </div>
+      </article>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+      <article class="small-card card">
+        <div class="views-and-likes">
+          <p class="like-view-text">Likes</p>
+          <i><img src="images/icon-facebook.svg" alt=""></i>
+        </div>
+        <div class="number-and-percent">
+          <p class="small-number">52</p>
+          <div class="percentage">
+            <i><img src="images/icon-down.svg" alt=""></i>
+            <p class="percentage-number down">2%</p>
+          </div>
+        </div>
+      </article>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+      <!-- INSTAGRAM -->
+      <article class="small-card card">
+        <div class="views-and-likes">
+          <p class="like-view-text">Likes</p>
+          <i><img src="images/icon-instagram.svg" alt=""></i>
+        </div>
+        <div class="number-and-percent">
+          <p class="small-number">5462</p>
+          <div class="percentage">
+            <i><img src="images/icon-up.svg" alt=""></i>
+            <p class="percentage-number up">2257%</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="small-card card">
+        <div class="views-and-likes">
+          <p class="like-view-text">Profile Views</p>
+          <i><img src="images/icon-instagram.svg" alt=""></i>
+        </div>
+        <div class="number-and-percent">
+          <p class="small-number">52K</p>
+          <div class="percentage">
+            <i><img src="images/icon-up.svg" alt=""></i>
+            <p class="percentage-number up">1375%</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- TWITTER -->
+      <article class="small-card card">
+        <div class="views-and-likes">
+          <p class="like-view-text">Retweets</p>
+          <i><img src="images/icon-twitter.svg" alt=""></i>
+        </div>
+        <div class="number-and-percent">
+          <p class="small-number">117</p>
+          <div class="percentage">
+            <i><img src="images/icon-up.svg" alt=""></i>
+            <p class="percentage-number up">303%</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="small-card card">
+        <div class="views-and-likes">
+          <p class="like-view-text">Likes</p>
+          <i><img src="images/icon-twitter.svg" alt=""></i>
+        </div>
+        <div class="number-and-percent">
+          <p class="small-number">507</p>
+          <div class="percentage">
+            <i><img src="images/icon-up.svg" alt=""></i>
+            <p class="percentage-number up">553%</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- YOUTUBE -->
+      <article class="small-card card">
+        <div class="views-and-likes">
+          <p class="like-view-text">Likes</p>
+          <i><img src="images/icon-youtube.svg" alt=""></i>
+        </div>
+        <div class="number-and-percent">
+          <p class="small-number">107</p>
+          <div class="percentage">
+            <i><img src="images/icon-down.svg" alt=""></i>
+            <p class="percentage-number down">303%</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="small-card card">
+        <div class="views-and-likes">
+          <p class="like-view-text">Total Views</p>
+          <i><img src="images/icon-youtube.svg" alt=""></i>
+        </div>
+        <div class="number-and-percent">
+          <p class="small-number">1407</p>
+          <div class="percentage">
+            <i><img src="images/icon-down.svg" alt=""></i>
+            <p class="percentage-number down">553%</p>
+          </div>
+        </div>
+      </article>
+    </div>
 
 
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Matthew Durflinger</a>.
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

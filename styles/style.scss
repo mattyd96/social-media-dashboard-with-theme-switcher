@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+// Variables
+:root {
+    --text-color: hsl(0, 0%, 100%);
+    --second-text-color: hsl(228, 34%, 66%);
+    --bg-color: hsl(230, 17%, 14%);
+    --header-color: hsl(232, 19%, 15%);
+    --card-color: hsl(228, 28%, 20%);
+
+    --max-width: 70rem;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin: 0;
+    background-color: var(--bg-color);
+}
+
+// Header Section
+.header-bg {
+    height: 13rem;
+    background-color: var(--header-color);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.container {
+    margin: 0 2rem;
+    margin-top: -12.5rem;
+}
+
+.heading-section {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: auto;
+
+    h1 {
+        color: var(--text-color);
+        margin-bottom: .3rem;
+    }
+
+    p {
+        color: var(--second-text-color);
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .dark-light-switch {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin-right: 1rem;
+        }
+    }
+}
+
+// Styling for all cards
+.card {
+    background-color: var(--card-color);
+
+    .up {
+        color: hsl(163, 72%, 41%);
+    }
+
+    .down {
+        color: hsl(356, 69%, 56%);
+    }
+}
+
+// Big Cards Section
+.big-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;  
+    max-width: var(--max-width);
+    margin: 3rem auto 0 auto;
+
+    .big-card {
+        width: 16rem;
+
+        .name-and-network {
+            display:flex;
+            justify-content: center;
+            align-items: center;          
+            margin: auto;
+            font-weight: 700;
+            color: var(--second-text-color);
+
+            p {
+                font-size: .75rem;
+                margin-left: .5rem;
+            }
+        }
+
+        .follower-count {
+            text-align: center;
+            .big-number {
+                font-size: 3.3rem;
+                font-weight: 700;
+                color:var(--text-color);
+                margin: 0;
+            }
+
+            .followers-subscribers {
+                font-size: .9rem;
+                letter-spacing: .2rem;
+                color: var(--second-text-color);
+                margin-top: 0;
+            }
+        }
+
+        .count-change {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+
+            i {
+                padding: 0 .3rem .3rem 0;
+            }
+        }
+        
+    }
+
+    .facebook::before {
+        content: "";
+        display: block;
+        min-width: 100%;
+        min-height: .2rem;
+        background: hsl(208, 92%, 53%);
+        border-radius: .25rem .25rem 0 0;
+    }
+
+    .twitter::before {
+        content: "";
+        display: block;
+        min-width: 100%;
+        min-height: .2rem;
+        background: hsl(203, 89%, 53%);
+        border-radius: .25rem .25rem 0 0;
+    }
+
+    .instagram::before {
+        content: "";
+        display: block;
+        min-width: 100%;
+        min-height: .2rem;
+        background: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+        border-radius: .25rem .25rem 0 0;
+    }
+
+    .youtube::before {
+        content: "";
+        display: block;
+        min-width: 100%;
+        min-height: .2rem;
+        background: hsl(348, 97%, 39%);
+        border-radius: .25rem .25rem 0 0;
+    }
+}
+
+
+// Overview Section
+.overview {
+    max-width: var(--max-width);
+    margin: 3rem auto 1rem auto;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.small-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: auto;
+
+    .small-card {
+        width: 13rem;
+        padding: .5rem 1.5rem;
+        border-radius: .25rem;
+
+        .like-view-text {
+            font-weight: 700;
+            color: var(--second-text-color);
+        }
+
+        .small-number {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color:var(--text-color);
+            margin: 0;
+        }
+        .views-and-likes {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .number-and-percent {
+            display: flex;
+            justify-content: space-between;
+            margin-top: .5rem;
+
+            .percentage {
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+                padding-bottom: 0;
+            }
+
+            i {
+                padding: 0 .1rem .3rem 0;
+            }
+        }
+    }
+}
+
+
+// Mobile Styling
+@media(max-width: 625px) {
+    .heading-section {
+        flex-direction: column;
+    }
+
+    .heading-text {
+        margin-bottom: 1rem;
+    }
+
+    .dark-light-switch {
+        justify-content: space-between;
+        border-top: .1rem solid hsl(227, 47%, 96%);
+        padding-top: 1rem;
+    }
+    
+    .big-cards .big-card {
+            width: 100%;
+    }
+
+    .small-cards .small-card {
+        width: 100%;
+    }
+
+    
+}
+
+//-------- Slider CSS -----------//
+// The switch - the box around the slider
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 1.5rem;
+}
+
+// Hide default HTML checkbox
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+// The slider 
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2rem;
+    width: 1.2rem;
+    left: .23rem;
+    bottom: .15rem;
+    background-color: hsl(232, 19%, 15%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background: hsl(230, 22%, 74%);
+}
+
+input:checked + .slider:before {
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+input:checked + .slider:before {
+    transform: translateX(1.27rem);
+}
+
+// Rounded sliders
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+// Attribute footer
+.attribution { margin-top: 2rem; font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
